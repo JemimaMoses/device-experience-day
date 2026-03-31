@@ -332,12 +332,9 @@
         </div>
 
         <h2>Program Overview</h2>
-        <p>Device Experience Day is a structured, time-bound testing event (typically 3 hours) where QS employees evaluate pre-release devices and provide customer-centric feedback to product teams. Unlike Beta testing—which is continuous, spans weeks/months with stable participants, and focuses on long-term reliability—Device Experience Day sessions are focused events with rotating participants that occur during Alpha/Pre-Alpha phases to influence fundamental design decisions. These sessions can be organized within 2 weeks, providing rapid feedback (results within 3 days) on specific features or use cases, complementing rather than replacing traditional Beta testing programs that provide sustained validation over time.</p>
+        <p>Device Experience Day is a time-bound testing event (typically 3 hours) where QS employees evaluate pre-release devices and provide customer-centric feedback to product teams. These sessions are conducted during Alpha/Pre-Alpha phases, ideally 2 weeks before Day 0, when product teams can still act on feedback to improve features and fix issues before street date (launch). Testing at this stage helps identify usability problems, confusing workflows, and customer pain points that might otherwise go unnoticed until after release. Sessions can be organized within 2 weeks and deliver insights within 3 days, enabling product teams to make decisions based on user feedback.</p>
 
-        <h2>Organizational Capability</h2>
-        <p>The QS organization comprises 1200 employees across Chennai, Bangalore, and Arlington who test 20+ products across Alexa-enabled devices, Non-Alexa devices, and applications. Teams engage from Braveheart phases through post-launch support, bringing technical expertise in issue identification, customer impact analysis, root cause determination, and resolution tracking. The organization has demonstrated capability to mobilize participants quickly, manage confidential pre-release devices, handle NDA processes, and provide feedback that directly influences product quality before market launch.</p>
-
-        <h2>Roles & Responsibilities</h2>
+        <h2>Responsibility & Scope Framework</h2>
         
         <h3>Three-Role Framework</h3>
         <div class="three-role-framework">
@@ -392,7 +389,9 @@
                         • Provide devices with appropriate builds<br>
                         • Share test accounts and data<br>
                         • Communicate NDA requirements<br>
-                        • Define acceptable/prohibited activities
+                        • Define acceptable/prohibited activities<br>
+                        • Reproduce bugs to confirm root causes<br>
+                        • Allocate development resources
                     </td>
                 </tr>
                 <tr>
@@ -405,16 +404,18 @@
                         • Schedule location<br>
                         • Collect NDAs<br>
                         • Recruit participants<br>
-                        • Prepare devices (charge, flash, configure)<br>
+                        • Prepare devices (charge ≥75% battery, flash specified builds, configure test accounts)<br>
+                        • Verify basic functionality<br>
                         • Print materials<br><br>
                         <strong>During Session (3 hours):</strong><br>
                         • Distribute devices<br>
                         • Conduct orientation<br>
-                        • Support issue filing (JIRA/SIM)<br>
+                        • Support issue filing (JIRA/SIM with details and logs)<br>
                         • Provide guidance<br>
                         • Collect feedback<br><br>
                         <strong>Post-Session (T+1 to T+3):</strong><br>
                         • Analyze feedback<br>
+                        • Conduct pattern analysis<br>
                         • Deduplicate issues<br>
                         • Share insights with PM<br>
                         • Document lessons learned
@@ -434,147 +435,112 @@
             </tbody>
         </table>
 
-        <h3>Process Flow</h3>
-        <div class="flowchart" style="display: flex; flex-direction: column; align-items: center; padding: 20px;">
-            <div class="flow-box flow-start">T-10: PM Defines Requirements</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-process">T-7: Facilitator Creates Sign-Up</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-process">T-5: Participant Registration</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-process">T-3: NDA Collection & Device Prep</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-process">T-1: Final Verification</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-action">T-0: Session Execution</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-action">Orientation (15 min)</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-action">Hands-On Testing (2h 15min)</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-action">Feedback Collection (30 min)</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-process">T+1 to T+3: Analysis & Reporting</div>
-            <div style="font-size: 14px; color: #666;">↓</div>
-            
-            <div class="flow-box flow-end">Insights to PM & Leadership</div>
-        </div>
-
         <h2>Event Structure and Execution</h2>
         
-        <h3>Session Configuration</h3>
         <table>
             <thead>
                 <tr>
-                    <th>Parameter</th>
-                    <th>Standard</th>
-                    <th>Notes</th>
+                    <th>Time</th>
+                    <th>Phase</th>
+                    <th>Activities</th>
+                    <th>Resources</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Duration</strong></td>
-                    <td>3 hours</td>
-                    <td>Fixed timeline</td>
+                    <td><strong>0:00 - 0:15</strong><br>(15 min)</td>
+                    <td>Orientation & Setup</td>
+                    <td>
+                        • Explain objectives<br>
+                        • Highlight features to test<br>
+                        • Review feedback process
+                    </td>
+                    <td>
+                        <strong>Duration:</strong> 3 hours (Fixed)<br>
+                        <strong>Participants:</strong> 12 (scalable to 20 for major launches)<br>
+                        <strong>Device Ratio:</strong> 1 device per 2-3 participants
+                    </td>
                 </tr>
                 <tr>
-                    <td><strong>Participants</strong></td>
-                    <td>12 (scalable to 20)</td>
-                    <td>For major launches</td>
+                    <td><strong>0:15 - 2:30</strong><br>(2h 15min)</td>
+                    <td>Hands-On Device Testing</td>
+                    <td>
+                        • Alarms, reminders, timers<br>
+                        • Media playback<br>
+                        • Voice interaction (Alexa/AI)<br>
+                        • Display & navigation<br>
+                        • Camera functionality<br>
+                        • App integration
+                    </td>
+                    <td>
+                        <strong>Build Version:</strong> Latest ship build on event day (as specified by PM)
+                    </td>
                 </tr>
                 <tr>
-                    <td><strong>Device Ratio</strong></td>
-                    <td>1 device per 2-3 participants</td>
-                    <td>Ensures adequate hands-on time</td>
-                </tr>
-                <tr>
-                    <td><strong>Build Version</strong></td>
-                    <td>Latest ship build on event day</td>
-                    <td>As specified by PM</td>
+                    <td><strong>2:30 - 3:00</strong><br>(30 min)</td>
+                    <td>Feedback Collection & Wrap-Up</td>
+                    <td>
+                        • Real-Time Issue Logging (JIRA/SIM)<br>
+                        • Structured Surveys<br>
+                        • Facilitator Observations<br>
+                        • Group Discussions<br>
+                        • Device return
+                    </td>
+                    <td>
+                        <strong>Feedback Forms:</strong><br>
+                        <a href="DED_Feedback_Form_Alexa.html" target="_blank">Alexa Devices</a><br>
+                        <a href="DED_Feedback_Form_Ring.html" target="_blank">Ring Devices</a>
+                    </td>
                 </tr>
             </tbody>
         </table>
 
-        <h3>3-Hour Session Structure</h3>
-        <div class="timeline-box">
-            <div class="timeline-item">
-                <div class="timeline-time">0:00 - 0:15</div>
-                <div class="timeline-content">
-                    <strong>Orientation & Setup</strong><br>
-                    • Explain objectives<br>
-                    • Highlight features to test<br>
-                    • Review feedback process
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-time">0:15 - 2:30</div>
-                <div class="timeline-content">
-                    <strong>Hands-On Device Testing</strong><br>
-                    • Alarms, reminders, timers<br>
-                    • Media playback<br>
-                    • Voice interaction (Alexa/AI)<br>
-                    • Display & navigation<br>
-                    • Camera functionality<br>
-                    • App integration
-                </div>
-            </div>
-            <div class="timeline-item">
-                <div class="timeline-time">2:30 - 3:00</div>
-                <div class="timeline-content">
-                    <strong>Feedback Collection & Wrap-Up</strong><br>
-                    • Complete surveys<br>
-                    • Final observations<br>
-                    • Device return
-                </div>
-            </div>
-        </div>
-
         <h3>Testing Focus Areas</h3>
-        <ul>
-            <li><strong>Core Functionality:</strong> Alarms, reminders, timers</li>
-            <li><strong>Media Experience:</strong> Music, video playback, streaming quality</li>
-            <li><strong>Voice Interaction:</strong> Classic Alexa, enhanced AI models, wake word detection</li>
-            <li><strong>Display & Navigation:</strong> UI responsiveness, menu navigation, visual quality</li>
-            <li><strong>Camera Features:</strong> Image quality, video calls, motion detection</li>
-            <li><strong>App Integration:</strong> Companion apps, cross-device features, account linking</li>
-        </ul>
-
-        <h3>Feedback Collection Channels</h3>
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <div class="metric-title">1. Real-Time Issue Logging</div>
-                <p>JIRA/SIM with severity classification</p>
-            </div>
-            <div class="metric-card">
-                <div class="metric-title">2. Structured Surveys</div>
-                <p>Quantitative ratings + Qualitative comments</p>
-            </div>
-            <div class="metric-card">
-                <div class="metric-title">3. Facilitator Observations</div>
-                <p>Behavioral insights and patterns</p>
-            </div>
-            <div class="metric-card">
-                <div class="metric-title">4. Group Discussions</div>
-                <p>Recurring themes and shared experiences</p>
-            </div>
-        </div>
+        
+        <details open>
+            <summary style="cursor: pointer; font-weight: bold; font-size: 16px; color: #146eb4; padding: 10px; background: #f8f9fa; border-radius: 5px; margin-bottom: 15px;">For Alexa Devices</summary>
+            <ul style="margin-left: 20px;">
+                <li><strong>Core Functionality:</strong> Alarms, reminders, timers</li>
+                <li><strong>Media Experience:</strong> Music, video playback, streaming quality</li>
+                <li><strong>Voice Interaction:</strong> Classic Alexa, enhanced AI models, wake word detection</li>
+                <li><strong>Display & Navigation:</strong> UI responsiveness, menu navigation, visual quality</li>
+                <li><strong>Camera Features:</strong> Image quality, video calls, motion detection</li>
+                <li><strong>App Integration:</strong> Companion apps, cross-device features, account linking</li>
+            </ul>
+        </details>
+        
+        <details open>
+            <summary style="cursor: pointer; font-weight: bold; font-size: 16px; color: #146eb4; padding: 10px; background: #f8f9fa; border-radius: 5px; margin-bottom: 15px;">For Ring Devices</summary>
+            <ul style="margin-left: 20px;">
+                <li><strong>Camera/Imaging System:</strong> Image quality, night vision, field of view, HDR performance</li>
+                <li><strong>Audio System:</strong> Two-way audio, speaker clarity, microphone sensitivity, noise cancellation</li>
+                <li><strong>Power Management:</strong> Battery life, charging performance, power consumption, low-power modes</li>
+                <li><strong>Edge Computing/AI:</strong> On-device AI processing, object detection (people, packages, animals, vehicles), facial recognition, smart alerts, computer vision algorithms</li>
+                <li><strong>Video Processing:</strong> Video encoding/compression, streaming quality, frame rate stability, latency measurements, pre-roll buffer</li>
+                <li><strong>Cloud Integration:</strong> Video upload to cloud, event recording, live view functionality, snapshot capture</li>
+                <li><strong>Mobile App Integration:</strong> Ring app connectivity, push notifications, real-time alerts, device setup/onboarding</li>
+                <li><strong>Security & Privacy:</strong> End-to-end encryption (E2EE), baseline encryption, authentication mechanisms, secure boot, privacy zones</li>
+                <li><strong>Smart Home Integration:</strong> Alexa integration (voice commands, announcements, routines), Ring Alarm integration, smart lighting coordination, chime integration, multi-device synchronization</li>
+                <li><strong>Setup & Onboarding:</strong> QR code scanning, Wi-Fi provisioning, device pairing, firmware updates (OTA)</li>
+                <li><strong>Performance Metrics:</strong> Response time, alert latency, app load time, video buffering</li>
+            </ul>
+        </details>
 
         <h2>Success Metrics</h2>
         
-        <div class="info-box">
-            <strong>Metrics Framework:</strong> Input Metrics (Preparation) → Output Metrics (Session Results) → Outcome Metrics (Quality Impact) → Business Impact (Customer Value)
+        <div style="display: flex; justify-content: center; align-items: center; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px; border-radius: 10px; margin: 30px 0;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="background: white; padding: 15px 25px; border-radius: 8px; font-weight: bold; color: #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">Input</div>
+                <div style="color: white; font-size: 24px;">→</div>
+                <div style="background: white; padding: 15px 25px; border-radius: 8px; font-weight: bold; color: #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">Output</div>
+                <div style="color: white; font-size: 24px;">→</div>
+                <div style="background: white; padding: 15px 25px; border-radius: 8px; font-weight: bold; color: #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">Outcome</div>
+                <div style="color: white; font-size: 24px;">→</div>
+                <div style="background: white; padding: 15px 25px; border-radius: 8px; font-weight: bold; color: #667eea; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">Business Impact</div>
+            </div>
         </div>
 
-        <h3>1. Input Metrics (Session Preparation)</h3>
+        <h3>1. Input Metrics</h3>
         <table>
             <thead>
                 <tr>
@@ -612,7 +578,7 @@
             </tbody>
         </table>
 
-        <h3>2. Output Metrics (Session Results)</h3>
+        <h3>2. Output Metrics</h3>
         <table>
             <thead>
                 <tr>
@@ -650,7 +616,7 @@
             </tbody>
         </table>
 
-        <h3>3. Outcome Metrics (Quality Impact)</h3>
+        <h3>3. Outcome Metrics</h3>
         <table>
             <thead>
                 <tr>
@@ -694,7 +660,7 @@
             </tbody>
         </table>
 
-        <h3>4. Business Impact Metrics (Customer Value)</h3>
+        <h3>4. Business Impact Metrics</h3>
         <table>
             <thead>
                 <tr>
@@ -728,68 +694,6 @@
                     <td>≥70%</td>
                     <td>Employee surveys</td>
                     <td>Genuine product confidence</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <h3>5. Customer-Centric Quality Metrics</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Metric</th>
-                    <th>Current State</th>
-                    <th>Target</th>
-                    <th>Business Impact</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Customer Issue Correlation</td>
-                    <td>Track baseline</td>
-                    <td>100%</td>
-                    <td>All customer pain points mapped to defects</td>
-                </tr>
-                <tr>
-                    <td>Device Impact Scale</td>
-                    <td>Measure via DED</td>
-                    <td>&lt;5% per defect</td>
-                    <td>Quantifies real-world exposure</td>
-                </tr>
-                <tr>
-                    <td>Issue Duration</td>
-                    <td>Track via DED</td>
-                    <td>&lt;30 days</td>
-                    <td>Measures customer pain duration</td>
-                </tr>
-                <tr>
-                    <td>DED Quality Score</td>
-                    <td>Calculate monthly</td>
-                    <td>20% QoQ improvement</td>
-                    <td>Single metric for customer-facing quality</td>
-                </tr>
-                <tr>
-                    <td>Fix Ratio Improvement</td>
-                    <td>Track in JIRA</td>
-                    <td>≥75%</td>
-                    <td>Customer-centric prioritization</td>
-                </tr>
-                <tr>
-                    <td>Defect Reprioritization Rate</td>
-                    <td>Monthly count</td>
-                    <td>Increasing trend</td>
-                    <td>Responsiveness to feedback</td>
-                </tr>
-                <tr>
-                    <td>Customer-Dev Alignment</td>
-                    <td>Sprint tracking</td>
-                    <td>≥60% capacity</td>
-                    <td>Dev focus on customer issues</td>
-                </tr>
-                <tr>
-                    <td>Quality Score Trend</td>
-                    <td>Monthly tracking</td>
-                    <td>Positive trend</td>
-                    <td>Continuous improvement</td>
                 </tr>
             </tbody>
         </table>
@@ -889,40 +793,6 @@
             </tbody>
         </table>
 
-        <h3>Risk Response Workflow</h3>
-        <div class="risk-workflow" style="padding: 20px;">
-            <div class="flow-box flow-start" style="padding: 8px 15px; font-size: 14px;">Risk Identified</div>
-            <div style="font-size: 14px; margin: 3px 0;">↓</div>
-            <div class="decision-box" style="padding: 15px 30px; font-size: 14px;">Severity Assessment</div>
-            <div style="font-size: 14px; margin: 3px 0;">↓</div>
-            
-            <div class="risk-branches" style="margin: 10px 0;">
-                <div class="risk-branch">
-                    <div class="risk-label" style="padding: 5px 10px; font-size: 11px; margin: 5px 0;">High Impact</div>
-                    <div style="font-size: 14px;">↓</div>
-                    <div class="flow-box flow-action" style="padding: 8px 15px; font-size: 13px;">Immediate Escalation to PM</div>
-                    <div style="font-size: 14px;">↓</div>
-                </div>
-                <div class="risk-branch">
-                    <div class="risk-label" style="padding: 5px 10px; font-size: 11px; margin: 5px 0;">Medium Impact</div>
-                    <div style="font-size: 14px;">↓</div>
-                    <div class="flow-box flow-action" style="padding: 8px 15px; font-size: 13px;">Facilitator Implements Mitigation</div>
-                    <div style="font-size: 14px;">↓</div>
-                </div>
-                <div class="risk-branch">
-                    <div class="risk-label" style="padding: 5px 10px; font-size: 11px; margin: 5px 0;">Low Impact</div>
-                    <div style="font-size: 14px;">↓</div>
-                    <div class="flow-box flow-action" style="padding: 8px 15px; font-size: 13px;">Document and Monitor</div>
-                    <div style="font-size: 14px;">↓</div>
-                </div>
-            </div>
-            
-            <div style="font-size: 14px; margin: 5px 0;">↓ ↓ ↓</div>
-            <div class="flow-box flow-action" style="padding: 8px 15px; font-size: 14px;">Collaborative Resolution</div>
-            <div style="font-size: 14px; margin: 3px 0;">↓</div>
-            <div class="flow-box flow-end" style="padding: 8px 15px; font-size: 14px;">Lessons Learned Documentation</div>
-        </div>
-
         <h2>Scalability Framework and Adaptation</h2>
         
         <h3>Three-Tier Scaling Model</h3>
@@ -985,119 +855,6 @@
             <strong>Available Resources</strong> → Devices, Facilitators, Participants<br>
             <strong>Testing Objectives</strong> → Focused = Small, Comprehensive = Large
         </div>
-
-        <h2>Scope Definition</h2>
-        
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin: 30px 0;">
-            <!-- QS Responsibility Column -->
-            <div style="background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%); padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h3 style="color: #155724; margin-top: 0; text-align: center; font-size: 24px;">
-                    <span style="font-size: 30px;">✓</span> QS Responsibility
-                </h3>
-                <p style="text-align: center; color: #155724; margin-bottom: 25px; font-style: italic;">What We Own</p>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: #28a745; margin-top: 0; border-bottom: 2px solid #28a745; padding-bottom: 8px;">Infrastructure & Logistics</h4>
-                    <p style="margin: 10px 0 5px 0; font-size: 14px;">• Provide testing facilities and locations</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Recruit and manage QS participants</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Schedule sessions and resources</p>
-                </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: #28a745; margin-top: 0; border-bottom: 2px solid #28a745; padding-bottom: 8px;">Device Preparation</h4>
-                    <p style="margin: 10px 0 5px 0; font-size: 14px;">• Charge devices (≥75% battery)</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Flash specified builds</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Configure test accounts</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Verify basic functionality</p>
-                </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: #28a745; margin-top: 0; border-bottom: 2px solid #28a745; padding-bottom: 8px;">Session Execution</h4>
-                    <p style="margin: 10px 0 5px 0; font-size: 14px;">• Conduct orientation and demonstrations</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Facilitate hands-on testing</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Support participants during session</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Collect real-time feedback</p>
-                </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: #28a745; margin-top: 0; border-bottom: 2px solid #28a745; padding-bottom: 8px;">Feedback Management</h4>
-                    <p style="margin: 10px 0 5px 0; font-size: 14px;">• File issues in JIRA/SIM with details and logs</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Conduct pattern analysis</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Deduplicate and prioritize issues</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Share insights with PM and QS leadership</p>
-                </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: #28a745; margin-top: 0; border-bottom: 2px solid #28a745; padding-bottom: 8px;">Documentation</h4>
-                    <p style="margin: 10px 0 5px 0; font-size: 14px;">• Create surveys and feedback forms</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Document lessons learned</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Track metrics and outcomes</p>
-                </div>
-            </div>
-            
-            <!-- PM Responsibility Column -->
-            <div style="background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%); padding: 30px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-                <h3 style="color: #856404; margin-top: 0; text-align: center; font-size: 24px;">
-                    <span style="font-size: 30px;">👤</span> PM Responsibility
-                </h3>
-                <p style="text-align: center; color: #856404; margin-bottom: 25px; font-style: italic;">What PM Owns</p>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: #ff9900; margin-top: 0; border-bottom: 2px solid #ff9900; padding-bottom: 8px;">Product Decisions</h4>
-                    <p style="margin: 10px 0 5px 0; font-size: 14px;">• Select devices/features for evaluation</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Define testing objectives and success criteria</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Determine specific testing focus areas</p>
-                </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: #ff9900; margin-top: 0; border-bottom: 2px solid #ff9900; padding-bottom: 8px;">Device Provision</h4>
-                    <p style="margin: 10px 0 5px 0; font-size: 14px;">• Provide devices and accessories</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Specify build versions and configurations</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Manage device inventory and allocation</p>
-                </div>
-                
-                <div style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
-                    <h4 style="color: #ff9900; margin-top: 0; border-bottom: 2px solid #ff9900; padding-bottom: 8px;">Issue Resolution</h4>
-                    <p style="margin: 10px 0 5px 0; font-size: 14px;">• Reproduce bugs to confirm root causes</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Make final prioritization decisions</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Determine resolution timelines</p>
-                    <p style="margin: 5px 0; font-size: 14px;">• Allocate development resources</p>
-                </div>
-            </div>
-        </div>
-
-        <h3>Scope Summary</h3>
-        <table>
-            <thead>
-                <tr>
-                    <th>Activity</th>
-                    <th style="background: #28a745;">✓ QS Responsibility</th>
-                    <th style="background: #ff9900;">👤 PM Responsibility</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Session Planning</strong></td>
-                    <td>Logistics, recruitment, scheduling</td>
-                    <td>Requirements, objectives, device selection</td>
-                </tr>
-                <tr>
-                    <td><strong>Device Management</strong></td>
-                    <td>Preparation, configuration, testing</td>
-                    <td>Provision, build specification, inventory</td>
-                </tr>
-                <tr>
-                    <td><strong>Feedback Collection</strong></td>
-                    <td>Filing, analysis, prioritization</td>
-                    <td>Review, decision-making, action planning</td>
-                </tr>
-                <tr>
-                    <td><strong>Issue Resolution</strong></td>
-                    <td>Documentation, tracking</td>
-                    <td>Root cause analysis, fixing, validation</td>
-                </tr>
-            </tbody>
-        </table>
 
         <h2>Frequently Asked Questions</h2>
         
@@ -1164,12 +921,12 @@
                 </tbody>
             </table>
 
-            <h3>4. What are typical risks in Chennai/international locations?</h3>
+            <h3>4. What about international/remote locations?</h3>
             <ul>
-                <li><strong>Primary Risk:</strong> Time zone coordination when PMs are in EU/US</li>
-                <li><strong>Mitigation:</strong> Asynchronous requirements gathering, independent execution, post-session comprehensive analysis</li>
-                <li><strong>Additional Considerations:</strong> Device shipping lead time (add 1 week for customs), but no significant cultural/language barriers</li>
-                <li><strong>Advantage:</strong> Geographic diversity provides valuable perspectives on global market reception</li>
+                <li>Time zone coordination handled through asynchronous processes</li>
+                <li>Device shipping requires 1 week lead time for customs</li>
+                <li>Geographic diversity provides valuable global market perspectives</li>
+                <li>No significant cultural/language barriers for QS teams</li>
             </ul>
 
             <h3>5. How much advance notice is needed?</h3>
@@ -1352,54 +1109,54 @@
             <div class="timeline-item">
                 <div class="timeline-time">T-10 Days</div>
                 <div class="timeline-content">
-                    ☐ Gather requirements from PM<br>
-                    ☐ Create sign-up form<br>
-                    ☐ Schedule location
+                    <label><input type="checkbox"> Gather requirements from PM</label><br>
+                    <label><input type="checkbox"> Create sign-up form</label><br>
+                    <label><input type="checkbox"> Schedule location</label>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-time">T-7 Days</div>
                 <div class="timeline-content">
-                    ☐ Send invitations<br>
-                    ☐ Collect NDA signatures<br>
-                    ☐ Confirm device availability
+                    <label><input type="checkbox"> Send invitations</label><br>
+                    <label><input type="checkbox"> Collect NDA signatures</label><br>
+                    <label><input type="checkbox"> Confirm device availability</label>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-time">T-3 Days</div>
                 <div class="timeline-content">
-                    ☐ Prepare devices (charge, flash, configure)<br>
-                    ☐ Print feature highlight materials<br>
-                    ☐ Confirm participant count<br>
-                    ☐ Send reminder emails
+                    <label><input type="checkbox"> Prepare devices (charge, flash, configure)</label><br>
+                    <label><input type="checkbox"> Print feature highlight materials</label><br>
+                    <label><input type="checkbox"> Confirm participant count</label><br>
+                    <label><input type="checkbox"> Send reminder emails</label>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-time">T-1 Day</div>
                 <div class="timeline-content">
-                    ☐ Final device testing<br>
-                    ☐ Prepare feedback forms<br>
-                    ☐ Set up testing area<br>
-                    ☐ Verify network connectivity
+                    <label><input type="checkbox"> Final device testing</label><br>
+                    <label><input type="checkbox"> Prepare feedback forms</label><br>
+                    <label><input type="checkbox"> Set up testing area</label><br>
+                    <label><input type="checkbox"> Verify network connectivity</label>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-time">Session Day</div>
                 <div class="timeline-content">
-                    ☐ Orientation (15 min)<br>
-                    ☐ Hands-on testing (2h 15min)<br>
-                    ☐ Feedback collection (30 min)<br>
-                    ☐ Device return and verification
+                    <label><input type="checkbox"> Orientation (15 min)</label><br>
+                    <label><input type="checkbox"> Hands-on testing (2h 15min)</label><br>
+                    <label><input type="checkbox"> Feedback collection (30 min)</label><br>
+                    <label><input type="checkbox"> Device return and verification</label>
                 </div>
             </div>
             <div class="timeline-item">
                 <div class="timeline-time">T+1 to T+3 Days</div>
                 <div class="timeline-content">
-                    ☐ Analyze feedback<br>
-                    ☐ Deduplicate issues<br>
-                    ☐ Share insights with PM<br>
-                    ☐ Document lessons learned<br>
-                    ☐ Update metrics dashboard
+                    <label><input type="checkbox"> Analyze feedback</label><br>
+                    <label><input type="checkbox"> Deduplicate issues</label><br>
+                    <label><input type="checkbox"> Share insights with PM</label><br>
+                    <label><input type="checkbox"> Document lessons learned</label><br>
+                    <label><input type="checkbox"> Update metrics dashboard</label>
                 </div>
             </div>
         </div>
